@@ -29,7 +29,7 @@ app.get('/finish', (req, res) => {
     localStorage[objIndex].status = 1;
 
     saveData(localStorage);
-    
+
     res.redirect('/');
 });
 
@@ -38,7 +38,7 @@ app.get('/delete', (req, res) => {
         console.log(item.id != req.query.id);
         return item.id != req.query.id;
     });
-    
+
     saveData(localStorage);
 
     res.redirect('/');
@@ -52,7 +52,7 @@ app.post('/add', (req, res) => {
         status: 0,
     };
     localStorage.push(object);
-    
+
     saveData(localStorage);
 
     res.redirect('/');
